@@ -1,6 +1,6 @@
 {
   "name": "generator-node-tsc-babelz",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Library Generator for Yeomann",
   "main": "index.js",
   "scripts": {
