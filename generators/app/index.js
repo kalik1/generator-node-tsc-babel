@@ -119,8 +119,6 @@ module.exports = class extends Generator {
                 "lint": "eslint src/**",
                 "type-check": "tsc --noEmit",
                 "type-check:watch": "npm run type-check -- --watch",
-                "build:all": "npm run build:types && npm run build:js",
-                "build": "npm run build:js",
                 "build:js": "babel src --out-dir " + this.outputPath + " --extensions \".ts,.tsx\" --source-maps inline",
                 "start": "node " + this.outputPath,
                 "debug": "node --inspect-brk ./index.js",
@@ -149,7 +147,6 @@ module.exports = class extends Generator {
         } else {
             Object.assign({"name": this.loadedConfig.appname}, pkgJson.scripts, {
                 "build": "npm run build:js",
-                "build:js": "babel src --out-dir " + this.outputPath + " --extensions \".ts,.tsx\" --source-maps inline",
             })
         }
 
