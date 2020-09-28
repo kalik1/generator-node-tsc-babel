@@ -1,0 +1,23 @@
+{
+  "name": "generator-unilibrary",
+  "version": "1.0.13",
+  "description": "Unidata Library Generator for Yeomann",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.unidata.it/LORA/generator-unilibrary"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "yeoman-generator": "^1.0.0"
+  },
+  "author": "Giorgio Pillon",
+  "license": "ISC"
+}

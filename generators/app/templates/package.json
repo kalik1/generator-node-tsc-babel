@@ -1,0 +1,48 @@
+{
+  "version": "0.0.1",
+  "watch": {
+    "dev": "./src/**/*.js"
+  },
+  "scripts": {
+    "lint": "eslint src/**",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "start": "node dist",
+    "debug": "node --inspect-brk ./index.js",
+    "watch": "npm-watch dev",
+    "dev": "nodemon index.js",
+    "coverage": "jest --collect-coverage",
+    "test": "jest",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm publish",
+    "build:all": "npm run build:types && npm run build:js"
+  },
+  "engines": {
+    "node": ">=8.1.0",
+    "npm": ">=3.8.6"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/runtime": "^7.11.2",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/register": "^7.11.5",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "concurrently": "^5.3.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "npm-watch": "^0.7.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {},
+  "main": "./dist/index.js",
+  "description": "It makes cool things"
+}
