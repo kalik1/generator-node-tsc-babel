@@ -114,6 +114,7 @@ module.exports = class extends Generator {
         );
 
         let pkgJson = {
+            "name": this.loadedConfig.appname,
             "main": "./" + this.outputPath + "/index.js",
             "scripts": {
                 "lint": "eslint src/**",
@@ -140,12 +141,12 @@ module.exports = class extends Generator {
         };
 
         if (this.isLibrary) {
-            Object.assign({"name": this.loadedConfig.appname}, pkgJson.scripts, {
+            Object.assign(pkgJson.scripts, {
                 "build": "npm run build:types && npm run build:js",
                 "build:types": "tsc --emitDeclarationOnly",
             })
         } else {
-            Object.assign({"name": this.loadedConfig.appname}, pkgJson.scripts, {
+            Object.assign(pkgJson.scripts, {
                 "build": "npm run build:js",
             })
         }
