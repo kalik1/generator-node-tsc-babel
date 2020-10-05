@@ -36,13 +36,13 @@ module.exports = class extends Generator {
                 persistent: true,
                 name: "gitBaseUrl",
                 message: "Git Base Url?",
-                default: 'git.unidata.it' // Default to current folder name
+                default: 'github.com' // Default to current folder name
             },
             {
                 type: "input",
                 persistent: true,
                 name: "gitWorkspaceName",
-                message: "Git WorkSpace Name? (Your Usernane)",
+                message: "Git WorkSpace Name? (Your Username)",
                 default: 'my-username' // Default to current folder name
             },
             {
