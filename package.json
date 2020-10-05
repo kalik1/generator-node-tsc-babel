@@ -1,6 +1,6 @@
 {
   "name": "generator-node-tsc-babel",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Library Generator for Yeomann",
   "main": "index.js",
   "scripts": {
