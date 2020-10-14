@@ -1,7 +1,7 @@
 {
   "name": "generator-node-tsc-babel",
   "version": "1.0.17",
-  "description": "Library Generator for Yeomann",
+  "description": "Boilerplate for starting new project with typescript + babel + jest",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
