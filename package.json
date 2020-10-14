@@ -19,5 +19,10 @@
     "yeoman-generator": "^1.0.0"
   },
   "author": "Giorgio Pillon",
+  "contributors": [
+    { 
+      "name" : "Ssaulss"
+    }
+  ],
   "license": "ISC"
 }
