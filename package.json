@@ -1,6 +1,6 @@
 {
   "name": "generator-node-tsc-babel",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Boilerplate for starting new project with typescript + babel + jest",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,8 @@
   },
   "author": "Giorgio Pillon",
   "contributors": [
-    { 
-      "name" : "Ssaulss"
+    {
+      "name": "Ssaulss"
     }
   ],
   "license": "ISC"
