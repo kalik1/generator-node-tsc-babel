@@ -28,3 +28,8 @@ Then Answer Questions!
 ## License
 
 MIT
+
+#FAQ
+
+*Q*: `"rm" is not recognized as an internal or external command, operable program or batch file` on Windows \
+*A*: Use git bash as default shell
