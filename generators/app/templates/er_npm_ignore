@@ -21,6 +21,7 @@ coverage/
 .eslintrc
 .nyc_output/
 .idea
+.vscode
 .git*
 
 node_modules

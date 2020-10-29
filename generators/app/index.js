@@ -95,6 +95,7 @@ module.exports = class extends Generator {
         this.outputPath = this.answers.isLibrary ? 'lib' : 'dist';
 
         queriesWithoutAnswered.forEach(query => this.config.set(query.name, this.answers[query.name]));
+        this.config.currentYear = (new Date()).getFullYear()
 
         this.loadedConfig = await this.config.getAll();
         // this.log("app name", this.answers.appname);
@@ -112,6 +113,8 @@ module.exports = class extends Generator {
                 outputPath: this.outputPath
             }
         );
+
+        const baseBuild = `rm -rf ./${this.outputPath}/ &&`
 
         let pkgJson = {
             "name": this.loadedConfig.appname,
@@ -142,12 +145,12 @@ module.exports = class extends Generator {
 
         if (this.isLibrary) {
             Object.assign(pkgJson.scripts, {
-                "build": "npm run build:types && npm run build:js",
-                "build:types": "tsc --emitDeclarationOnly",
+                "build": `${baseBuild} npm run build:types && npm run build:js`,
+                "build:types": `tsc --emitDeclarationOnly`,
             })
         } else {
             Object.assign(pkgJson.scripts, {
-                "build": "npm run build:js",
+                "build": `${baseBuild} npm run build:js`,
             })
         }
 
