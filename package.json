@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/kalik1/generator-node-tsc-babel"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "yeoman-generator",
     "starter",

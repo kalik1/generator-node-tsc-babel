@@ -95,7 +95,7 @@ module.exports = class extends Generator {
         this.outputPath = this.answers.isLibrary ? 'lib' : 'dist';
 
         queriesWithoutAnswered.forEach(query => this.config.set(query.name, this.answers[query.name]));
-        this.config.currentYear = (new Date()).getFullYear()
+        this.config.set("currentYear", (new Date()).getFullYear());
 
         this.loadedConfig = await this.config.getAll();
         // this.log("app name", this.answers.appname);
@@ -114,7 +114,7 @@ module.exports = class extends Generator {
             }
         );
 
-        const baseBuild = `rm -rf ./${this.outputPath}/ &&`
+        const baseBuild = `npm test && rm -rf ./${this.outputPath}/ &&`
 
         let pkgJson = {
             "name": this.loadedConfig.appname,
@@ -157,7 +157,8 @@ module.exports = class extends Generator {
         const ctx = {
             appname: this.loadedConfig.appname,
             description: this.loadedConfig.description,
-            author: this.loadedConfig.author
+            author: this.loadedConfig.author,
+            currentYear: this.loadedConfig.currentYear,
         };
 
         await this.fs.copyTpl(
