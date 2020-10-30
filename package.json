@@ -12,7 +12,12 @@
     "url": "https://github.com/kalik1/generator-node-tsc-babel"
   },
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "starter",
+    "boilerplate",
+    "babel",
+    "typescript",
+    "jest"
   ],
   "dependencies": {
     "lodash": "^4.17.15",

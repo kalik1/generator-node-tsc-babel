@@ -3,13 +3,7 @@
   "watch": {
     "dev": "./src/**/*.js"
   },
-  "keywords": [
-    "starter",
-    "boilerplate",
-    "babel",
-    "typescript",
-    "jest"
-  ],
+
   "scripts": {
     "lint": "eslint src/**",
     "type-check": "tsc --noEmit",
