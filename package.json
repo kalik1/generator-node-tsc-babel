@@ -1,6 +1,6 @@
 {
   "name": "generator-node-tsc-babel",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Boilerplate for starting new project with typescript + babel + jest",
   "main": "index.js",
   "scripts": {
