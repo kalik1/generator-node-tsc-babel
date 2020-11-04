@@ -145,7 +145,7 @@ module.exports = class extends Generator {
 
         if (this.isLibrary) {
             Object.assign(pkgJson.scripts, {
-                "build": `${baseBuild} npm run build:types && npm run build:js`,
+                "build": `${baseBuild} npm run build:types && npm run build:all`,
                 "build:types": `tsc --emitDeclarationOnly`,
             })
         } else {
