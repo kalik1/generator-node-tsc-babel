@@ -73,13 +73,7 @@ module.exports = class extends Generator {
                 message: "Would you like to run 'npm install' at the end?",
                 default: false
             },
-            {
-                type: "confirm",
-                persistent: false,
-                name: "initGitRepo",
-                message: "Would you like init Git REPO at the end?",
-                default: false
-            }
+
         ];
 
         let queriesWithoutAnswered =
@@ -211,16 +205,16 @@ module.exports = class extends Generator {
         this.config.save();
     }
 
-    async initGit() {
-        if (this.loadedConfig.initGitRepo) {
-            console.log(`Push to git@${this.loadedConfig.gitBaseUrl}:${this.loadedConfig.gitWorkspaceName}/${this.loadedConfig.appname}.git`)
-            await this.spawnCommandSync('git', ['init'], {shell :true});
-            await this.spawnCommandSync('git', ['remote', 'add', 'origin', `git@${this.loadedConfig.gitBaseUrl}:${this.loadedConfig.gitWorkspaceName}/${this.loadedConfig.appname}.git`], {shell :true});
-            await this.spawnCommandSync('git', ['add', '.'], {shell :true});
-            await this.spawnCommandSync('git', ['commit', '-m', '"Initial commit"'], {shell :true});
-            await this.spawnCommandSync('git', ['push', '-u', 'origin', 'master'], {shell :true});
-        }
-    }
+    // async initGit() {
+    //     if (this.loadedConfig.initGitRepo) {
+    //         console.log(`Push to git@${this.loadedConfig.gitBaseUrl}:${this.loadedConfig.gitWorkspaceName}/${this.loadedConfig.appname}.git`)
+    //         await this.spawnCommandSync('git', ['init'], {shell :true});
+    //         await this.spawnCommandSync('git', ['remote', 'add', 'origin', `git@${this.loadedConfig.gitBaseUrl}:${this.loadedConfig.gitWorkspaceName}/${this.loadedConfig.appname}.git`], {shell :true});
+    //         await this.spawnCommandSync('git', ['add', '.'], {shell :true});
+    //         await this.spawnCommandSync('git', ['commit', '-m', '"Initial commit"'], {shell :true});
+    //         await this.spawnCommandSync('git', ['push', '-u', 'origin', 'master'], {shell :true});
+    //     }
+    // }
 
     gitRemoteAdd() { }
 

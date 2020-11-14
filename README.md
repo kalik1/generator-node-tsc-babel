@@ -12,7 +12,7 @@ npm install --global yo
 Install node-tsc-babel
 
 ```
-npm install -g generator-tsc-babel
+npm install -g generator-node-tsc-babel
 ```
 
 Profit!
@@ -20,7 +20,7 @@ Profit!
 ## How-to-Profit
 
 ```
-yo generator-tsc-babel
+yo generator-node-tsc-babel
 ```
 
 Then Answer Questions!
