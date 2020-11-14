@@ -105,13 +105,19 @@ module.exports = class extends Generator {
     }
 
     async writing() {
+
+        const ctx = {
+            appname: this.loadedConfig.appname,
+            description: this.loadedConfig.description,
+            author: this.loadedConfig.author,
+            currentYear: this.loadedConfig.currentYear,
+            outputPath: this.outputPath
+        };
+
         this.fs.copyTpl(
             this.templatePath('package.json'),
             this.destinationPath('package.json'),
-            {
-                appname: this.loadedConfig.appname,
-                outputPath: this.outputPath
-            }
+            ctx
         );
 
         const baseBuild = `npm test && rm -rf ./${this.outputPath}/ &&`
@@ -153,13 +159,6 @@ module.exports = class extends Generator {
                 "build": `${baseBuild} npm run build:js`,
             })
         }
-
-        const ctx = {
-            appname: this.loadedConfig.appname,
-            description: this.loadedConfig.description,
-            author: this.loadedConfig.author,
-            currentYear: this.loadedConfig.currentYear,
-        };
 
         await this.fs.copyTpl(
             this.templatePath(),
