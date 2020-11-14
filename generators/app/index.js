@@ -73,7 +73,13 @@ module.exports = class extends Generator {
                 message: "Would you like to run 'npm install' at the end?",
                 default: false
             },
-
+            // {
+            //     type: "confirm",
+            //     persistent: false,
+            //     name: "initGitRepo",
+            //     message: "Would you like init Git REPO at the end?",
+            //     default: false
+            // }
         ];
 
         let queriesWithoutAnswered =
