@@ -1,4 +1,4 @@
-#Typescript + Bablel + JEST + Yeomann = Marriage, Forever. ❤
+# Typescript + Bablel + JEST + Yeomann = Marriage, Forever. ❤
 Library and application generator
 
 ## Installation
