@@ -136,7 +136,6 @@ module.exports = class extends Generator {
                 "dev": "nodemon index.js",
                 "coverage": "jest --collect-coverage",
                 "test": "jest",
-                "preversion": "npm run build",
                 "postversion": "git push && git push --tags && npm publish"
             },
             description: this.loadedConfig.description,
