@@ -155,6 +155,8 @@ module.exports = class extends Generator {
 
             Object.assign(pkgJson, {
                 "exports": "./" + this.outputPath + "/index.js",
+                "main": "./" + this.outputPath + "/index.js",
+
             })
 
         } else {
