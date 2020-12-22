@@ -124,7 +124,6 @@ module.exports = class extends Generator {
 
         let pkgJson = {
             "name": this.loadedConfig.appname,
-            "main": "./" + this.outputPath + "/index.js",
             "scripts": {
                 "lint": "eslint src/**",
                 "type-check": "tsc --noEmit",
@@ -153,9 +152,18 @@ module.exports = class extends Generator {
                 "build": `${baseBuild} && npm run build:all`,
                 "build:types": `tsc --emitDeclarationOnly`,
             })
+
+            Object.assign(pkgJson, {
+                "exports": "./" + this.outputPath + "/index.js",
+            })
+
         } else {
             Object.assign(pkgJson.scripts, {
                 "build": `${baseBuild} npm run build:js`,
+            })
+
+            Object.assign(pkgJson, {
+                "main": "./" + this.outputPath + "/index.js",
             })
         }
 
