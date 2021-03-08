@@ -77,7 +77,7 @@ PLEASE use [Semantic versioning](https://semver.org/) for your releases!
 ```
 npm version <patch | minor | major >
 ```
-More aboun npm version [here](https://docs.npmjs.com/cli/v6/commands/npm-version)
+More about npm version [here](https://docs.npmjs.com/cli/v6/commands/npm-version)
 
 ###  
 
